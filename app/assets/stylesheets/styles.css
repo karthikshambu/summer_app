@@ -363,7 +363,7 @@ ul.customer-services li a:active,
 ul.customer-services li a:focus,
 ul.customer-services li a:hover{
   color: #f0141e;
-  text-decoration: none
+  text-decoration: none;
   font-family: arial;
 }
 
