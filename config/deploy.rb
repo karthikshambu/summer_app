@@ -1,5 +1,5 @@
 require 'bundler/capistrano'
-require 'new_relic/recipes'
+# require 'new_relic/recipes'
 load 'deploy/assets'
 
 set :application, "summer_app"
@@ -51,21 +51,19 @@ aws_staging :ec2_staging_summer do
 end
 
 
-after "deploy:assets:precompile","deploy:create_symlink", "deploy:update_crontab"
-after "deploy:create_symlink", "deploy:delayed_job_restart"
+after "deploy:assets:precompile", "deploy:update_crontab"
 #after "deploy:update", "newrelic:notice_deployment"
-
 
 namespace :deploy do
   namespace :assets do
     task :precompile, :roles => :web, :except => { :no_release => true } do
-      from = source.next_revision(current_revision)
-      if releases.length <= 1 || capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
-        run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
-        run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:clean_expired}
-      else
-        logger.info "Skipping asset pre-compilation because there were no asset changes"
-      end
+      # from = source.next_revision(current_revision)
+      # if releases.length <= 1 || capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
+      #   run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
+      #   run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:clean_expired}
+      # else
+      #   logger.info "Skipping asset pre-compilation because there were no asset changes"
+      # end
     end
   end
   before "deploy:update_crontab" do
@@ -83,24 +81,21 @@ namespace :deploy do
     # run "ln -s #{shared_path}/views #{release_path}/tmp/views"
   end
 
-  # desc "Update the crontab file"
-  # task :update_crontab, :roles => :db do
+  desc "Update the crontab file"
+  task :update_crontab, :roles => :db do
   #   # run "cd #{release_path} && bundle exec whenever --update-crontab #{application}"
   #   run "cd #{release_path} && bundle exec rackup faye.ru -s thin -E production -D"
-  # end
-
+  end
   task :start do ; end
   task :stop do ; end
 
   desc "Restart the delayed_job process"
   task :delayed_job_restart, :roles => :app do
-    run "cd #{current_path} && RAILS_ENV=production script/delayed_job --queue=notifications -i 1 restart"
-    run "cd #{current_path} && RAILS_ENV=production script/delayed_job --queue=replies -i 2 restart"
-    run "cd #{current_path} && RAILS_ENV=production script/delayed_job -queue=default -i 3 restart"
+    # run "cd #{current_path} && RAILS_ENV=production script/delayed_job --queue=notifications -i 1 restart"
+    # run "cd #{current_path} && RAILS_ENV=production script/delayed_job --queue=replies -i 2 restart"
+    # run "cd #{current_path} && RAILS_ENV=production script/delayed_job -queue=default -i 3 restart"
   end
-
   task :restart, :roles => :app, :except => { :no_release => true } do
-
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
