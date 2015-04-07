@@ -12,7 +12,7 @@ gem "httparty", '0.11.0'
 gem "highline", '1.6.21'
 gem 'settingslogic'
 gem 'delayed_job_active_record'
-gem 'ruby-oci8', '~> 2.1.0'
+gem 'ruby-oci8', '~> 2.1.8'
 gem 'activerecord-oracle_enhanced-adapter', "1.4.1"
 
 gem 'jquery-rails'
