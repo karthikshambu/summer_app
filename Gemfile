@@ -17,12 +17,19 @@ gem 'activerecord-oracle_enhanced-adapter', "1.4.1"
 
 gem 'jquery-rails'
 
+group :assets do
+  gem 'therubyracer'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
+end
+
 group :development, :test do
   gem "capistrano","2.14.2"
   gem "capistrano-ext"
   # gem "rspec-rails", "~> 2.6"
-  gem 'spork', '~> 1.0rc'
-  gem 'shoulda-matchers'
+  # gem 'spork', '~> 1.0rc'
+  # gem 'shoulda-matchers'
   # gem "factory_girl", "2.2.0"
   # gem "factory_girl_rails", "1.3.0"
   # gem "rspec-http"
