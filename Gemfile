@@ -12,21 +12,21 @@ gem "httparty", '0.11.0'
 gem "highline", '1.6.21'
 gem 'settingslogic'
 gem 'delayed_job_active_record'
-gem 'activerecord-oracle_enhanced-adapter', "1.4.1"
 gem 'ruby-oci8', '~> 2.1.0'
+gem 'activerecord-oracle_enhanced-adapter', "1.4.1"
 
 gem 'jquery-rails'
 
 group :development, :test do
   gem "capistrano","2.14.2"
   gem "capistrano-ext"
-  gem "rspec-rails", "~> 2.6"
+  # gem "rspec-rails", "~> 2.6"
   gem 'spork', '~> 1.0rc'
   gem 'shoulda-matchers'
-  gem "factory_girl", "2.2.0"
-  gem "factory_girl_rails", "1.3.0"
-  gem "rspec-http"
-  gem 'database_cleaner', git: 'git@github.com:bmabey/database_cleaner.git'
+  # gem "factory_girl", "2.2.0"
+  # gem "factory_girl_rails", "1.3.0"
+  # gem "rspec-http"
+  # gem 'database_cleaner', git: 'git@github.com:bmabey/database_cleaner.git'
   gem 'pry'
   gem 'pry-remote'
   gem 'pry-nav'
