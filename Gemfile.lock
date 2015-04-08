@@ -154,7 +154,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-oracle_enhanced-adapter (= 1.4.1)
+  activerecord-oracle_enhanced-adapter
   capistrano (= 2.14.2)
   capistrano-ext
   coffee-rails
@@ -168,7 +168,7 @@ DEPENDENCIES
   pry-nav
   pry-remote
   rails (= 3.2.12)
-  ruby-oci8 (~> 2.1.8)
+  ruby-oci8
   sass-rails
   settingslogic
   therubyracer
