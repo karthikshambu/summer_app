@@ -39,6 +39,7 @@ body {
 .navbar-nav>li>a {
     font-family: vegurlight;
     color: #000;
+    padding-top: 25px;
 }
 .navbar-nav>li.active>a, .navbar-nav>li>a:hover {
     font-family: vegurbold;
@@ -99,7 +100,7 @@ h1 {
     margin-left: 10px;
 }
 .footer {
-    font-family: vegurregular;
+    font-family: vegur;
     font-size: 12px;
     text-align: center;
     margin-top: 20px;
@@ -111,7 +112,7 @@ h1 {
     text-align: left;
 }
 .sub-heading > h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: vegur;
   margin-top: 40px;
   font-weight: bold;
@@ -121,4 +122,21 @@ h1 {
 }
 .img-responsive{
   margin-top: 20px;
+  text-align: center;
+}
+.how-images {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 20px 0 20px;
+}
+.how-image-text {
+  float: left;
+  height: 100px;
+  margin: 0 20px 20px;
+}
+.arial-italic{
+  font-family: arial;
+  font-style: italic;
+  font-weight: bold;
 }
