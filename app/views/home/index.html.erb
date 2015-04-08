@@ -1,30 +1,45 @@
-<div id="sms_container">
-  <%= form_tag "home/send_sms", :id => 'send_sms_form', :remote => true do -%>
-    <%= text_field_tag 'phone_no', 'Enter your mobile number', maxlength: 10, style: "height: 35px" %>
-    &nbsp
-    <%= submit_tag "Go", style: "height:40px;width:50px;" %>
-  <% end %>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7">
+      <!-- <h1>
+        Checkout our Summer App
+      </h1> -->
+      <h4 class="landing-text">
+          Enter your Mobile Number
+      </h4>
+      <div class="row">
 
-<div id="download_buttons">
-  <span id="google_download"><a href="<%= root_path %>"><img src="/assets/app-store-icon.gif", style="width:120px;height:40px"></a></span>
-  <span id="iphone_download"><a href="<%= root_path %>"><img src="/assets/google-store-icon2.png", style="width:120px;height:40px"></a></span>
-</div>
+        <div class="col-lg-12">
+          <div class="send-app-link">
+            <%= form_tag "home/send_sms", :id => 'send_sms_form', :remote => true do -%>
+              <%= text_field_tag 'phone_no', '', maxlength: 10, class: "invalid num-elem phone-number" %>
+              <%= submit_tag "Get App Link", class: "btn pull-right secondary submit-number" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <a href="#" class="appstr"></a>
+        </div>
+        <div class="col-sm-6">
+          <a href="#" class="playstr"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <img src="/assets/andiph.png" class="img-responsive" alt="">
+    </div>
+  </div>
 
-<div id="about">
-  <div id="content_header">About Us</div>
-  Includes over 250 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you include a link back to Glyphicons whenever possible.
-  Includes over 250 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you include a link back to Glyphicons whenever possible.
-</div>
+  <div class="row sub-heading">
+    <h3 id="how">How it Works</h3>
+      <p>
+        JustBooks Summer App is specially designed to take care of you and your family’s summer reading requirement.  A well curated list of books awaits you with categorization as per age group and genre of books. We’ve made sure there is a book for everyone in the family… well, with just a little extra for your children! Mark your reading preference, browse books from our summer recommendation, add them to wishlist and rent two books at a time. Books will be delivered right at your door step.  Pay a subscription fee of just Rs. 1000 for 3 months of unlimited reading when you receive your first order. And yes, there is no limit of reading, you can rent as many times as you wish within the three month period.
+      This (limited edition!)service is currently available only across Mumbai.
+    </p>
+  </div>
 
-<div id="how_it_works">
-  <div id="content_header">How It Works</div>
-  Includes over 250 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you include a link back to Glyphicons whenever possible.
-  Includes over 250 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you include a link back to Glyphicons whenever possible.
-</div>
-
-<div id="contact">
-  <div id="content_header">Contact</div>
-  Includes over 250 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you include a link back to Glyphicons whenever possible.
-  Includes over 250 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you include a link back to Glyphicons whenever possible.
+  <div class="row sub-heading">
+    <h3 id="about">About us</h3>
+    <p>JustBooks clc is India’s largest community library chain with presence across India. The library has 65+ physical stores and operates on an online home delivery mechanism as well. For more information you may visit <a href="">www.justbooksclc.com.</a> </p>
+  </div>
 </div>
