@@ -50,6 +50,14 @@ aws_staging :ec2_staging_summer do
   set :location, "107.23.108.186"
 end
 
+aws :ec2_web do
+  set :branch, "master"
+  set :application, "summer_app"
+  set :deploy_to, "/rails/apps/summer_app"
+  set :location, "23.21.137.238"
+  delayed_job_flag = true
+end
+
 
 after "deploy:assets:precompile", "deploy:update_crontab"
 #after "deploy:update", "newrelic:notice_deployment"

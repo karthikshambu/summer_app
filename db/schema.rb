@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150407095036) do
+ActiveRecord::Schema.define(:version => 20150408130752) do
+
+  create_table "sms_contents", :force => true do |t|
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "summer_phone_numbers", :force => true do |t|
     t.string   "phone_number"

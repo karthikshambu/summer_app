@@ -54,6 +54,9 @@ h1 {
 .container{
   width: 900px;
 }
+.main-page {
+  margin: 60px 0 80px 0;
+}
 .landing-text {
     font-family: vegurlight;
     font-size: 15px;

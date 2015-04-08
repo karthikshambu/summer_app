@@ -12,5 +12,6 @@ test:
 
 production:
   website_url: 'staging.bookbundles.in'
-
-
+  exotel_number: 8067683816
+  exotel_sid: strata
+  exotel_token: e775799e17c3d67b5c1f8eaa66db07d570a50c82
