@@ -49,21 +49,19 @@ h1 {
   margin: 60px 0 140px 0;
 }
 .col-lg-7 .landing-text,.col-md-7 .landing-text{
-  margin-top: 130px;
+  margin: 130px 0 0 18px;
 }
 .landing-text {
     font-family: vegurlight;
     font-size: 15px;
     line-height: 0;
-    margin: 10px 0 0;
-
     text-align: left;
 }
 .appstr {
     background: url("https://s3.amazonaws.com/prod.justbooksclc.com/summer_app/button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     display: block;
     height: 57px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 18px;
     width: 194px;
 }
 .playstr {
