@@ -1,17 +1,3 @@
-/*!
- * Theme Name: JM Team
- * Theme URI: http://www.joomlart.com
- * Version: 1.0
- * Description:
- * Author: JM Team - Joomlart.com
- * Author URI: http://www.joomlart.com
- *
- * Powered by Magento
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- */
-/* Reset */
-
 @font-face {
   font-family: 'vegurbold';
   src: url('/assets/Vegur-B_0500.otf');
@@ -55,37 +41,46 @@ h1 {
   width: 900px;
 }
 .main-page {
-  margin: 60px 0 80px 0;
+  margin: 60px 0 140px 0;
+}
+.col-lg-7 .landing-text,.col-md-7 .landing-text{
+  margin-top: 130px;
 }
 .landing-text {
     font-family: vegurlight;
     font-size: 15px;
     line-height: 0;
-    margin: 130px 0 0;
-    padding-left: 58px;
+    margin: 10px 0 0;
+
     text-align: left;
 }
 .appstr {
     background: url("/assets/button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     display: block;
     height: 57px;
-    margin-left: 60px;
+    margin-bottom: 10px;
     width: 194px;
 }
 .playstr {
     background: url("/assets/button.png") no-repeat scroll -195px 0 rgba(0, 0, 0, 0);
     display: block;
     height: 57px;
-    margin-left: 10px;
+
     opacity: 0.3;
     width: 194px;
 }
 .send-app-link {
     /*border-bottom: 1px solid #837E7C;*/
-    display: inline-block;
+
     margin-top: 10px;
     margin-bottom: 40px;
+    text-align: left;
+    margin-left: -10px;
 }
+.send-app-link form{
+  float: left;
+}
+
 .invalid {
     height: 45px;
     left: 6px;
@@ -94,6 +89,7 @@ h1 {
     padding: 0 1px 6px;
     top: -1px;
     width: 300px;
+    margin-bottom: 20px;
 }
 .btn.secondary {
     background: none repeat scroll 0 0 #ffde17;
@@ -142,4 +138,7 @@ h1 {
   font-family: arial;
   font-style: italic;
   font-weight: bold;
+}
+.navbar-nav > li > a{
+  margin-right: 5px;
 }
