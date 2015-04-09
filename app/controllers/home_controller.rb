@@ -15,7 +15,7 @@ class HomeController < ApplicationController
       notice = ""
       if sms_sent_count < 3
         Exotel::Sms.send(:from => Settings.exotel_number, :to => phone_number, :body => content)
-        flash[:notice] = "You'll receive a SMS"
+        flash[:notice] = "Thank you. You will receive an SMS with the link to download the app."
       else
         flash[:notice] = "We already sent you an SMS. Try Tomorrow!"
       end
