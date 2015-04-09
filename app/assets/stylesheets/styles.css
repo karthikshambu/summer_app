@@ -138,7 +138,10 @@ h1 {
   float: left;
   font-family: vegurlight;
   height: 100px;
-  margin: 0 20px 20px;
+  margin: 0 20px 60px;
+}
+.how-image-text>h5{
+  font-weight: bolder;
 }
 .arial-italic{
   font-family: arial;
