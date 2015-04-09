@@ -4,15 +4,21 @@
       <!-- <h1>
         Checkout our Summer App
       </h1> -->
+      <%# binding.pry %>
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, :class => "flash #{key}") %>
+          <% if defined?(flush_flash) and flush_flash == true %>
+            <% flash.clear %>
+          <% end %>
+        <% end %>
+
       <div class="landing-text row">
           Enter your Mobile Number
       </div>
 
       <div class="row">
-
-
           <div class="send-app-link row">
-            <%= form_tag "home/send_sms", :id => 'send_sms_form', :remote => true do -%>
+            <%= form_tag send_sms_home_index_path, :id => 'send_sms_form' do -%>
               <div class="col-md-8 col-sm-6 col-xs-12">
                   <%= text_field_tag 'phone_no', '', maxlength: 10, class: "invalid  num-elem phone-number" %>
               </div>

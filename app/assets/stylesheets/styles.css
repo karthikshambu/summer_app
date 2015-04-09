@@ -27,7 +27,12 @@ body {
     color: #000;
     padding-top: 25px;
 }
-.navbar-nav>li.active>a, .navbar-nav>li>a:hover {
+.navbar-nav>li>a:hover {
+    font-family: vegurbold;
+    border-bottom: 2px solid #f00;
+    background: #fff;
+}
+.navbar-nav>li.selected>a {
     font-family: vegurbold;
     border-bottom: 2px solid #f00;
     background: #fff;
@@ -141,4 +146,14 @@ h1 {
 }
 .navbar-nav > li > a{
   margin-right: 5px;
+}
+
+.error {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.notice {
+  color: green;
+  font-weight: bold;
 }
