@@ -68,8 +68,7 @@ h1 {
     background: url("https://s3.amazonaws.com/prod.justbooksclc.com/summer_app/button.png") no-repeat scroll -195px 0 rgba(0, 0, 0, 0);
     display: block;
     height: 57px;
-
-    opacity: 0.3;
+    /*opacity: 0.3;*/
     width: 194px;
 }
 .send-app-link {
